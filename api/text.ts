@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { getProvider } from './_utils'
+import { getProvider } from './utils'
 
 export async function getEnsTextRecords(
   ensName: string
@@ -28,7 +28,7 @@ export async function getEnsTextRecords(
   return records
 }
 
-export default async function ensTextApi(
+export async function ensTextApi(
   request: VercelRequest,
   response: VercelResponse
 ) {
